@@ -5,17 +5,33 @@
  * - logs "Hello <name>" if there is a name
  */
 function greet(name) {
-  // Your code here
+  if (name) {
+    console.log(`Hello  ${name}`);
+  } else {
+    console.log(`Hello`);
+  }
 }
+
+greet("Aisha");
+
+greet();
 
 /**
  * isOdd(n):
  * - receives a number n
  * - returns true if it's odd, false otherwise
  */
+
 function isOdd(n) {
-  // Your code here
+  if (n % 2 != 0) {
+    console.log("Number is ODD");
+  } else {
+    console.log("Number is EVEN");
+  }
 }
+// return !!(n%2); <---- the two exclamation marks here convert the integer to a Boolean
+
+isOdd(4);
 
 /**
  * oddsSmallerThan(n):
@@ -29,8 +45,19 @@ function isOdd(n) {
  * Hint: you can solve this without writing any loops!
  */
 function oddsSmallerThan(n) {
-  // Your code here
+  if (n % 2 === 0) {
+    console.log(n / 2);
+  } else {
+    console.log((n - 1) / 2);
+  }
 }
+// if (isOdd(n)){
+// n--1;
+// }{
+// return n/2;
+// }
+
+oddsSmallerThan(7);
 
 /**
  * squareOrDouble(n):
@@ -43,8 +70,15 @@ function oddsSmallerThan(n) {
  * squareOrDouble(9) -> 81
  */
 function squareOrDouble(n) {
-  // Your code here
+  if (n % 2 != 0) {
+    console.log(n ** 2);
+  } else {
+    console.log(2 * n);
+  }
 }
+squareOrDouble(3);
+
+squareOrDouble(10);
 
 /**
  * ageFromBirthDate(birthDate):
